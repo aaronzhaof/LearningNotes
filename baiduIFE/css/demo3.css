@@ -1,0 +1,50 @@
+/*这里的三栏布局使用了自身浮动法
+  自身浮动法的原理就是使用对左右使用分别使用float:left和float:right，float使右两个元素脱离文档流，中间元素正常在正常文档流中，使用margin指定左右外边距对其进行一个定位。
+ 用margin预留出两边侧栏的width 中间一栏自适应宽度
+ 该布局法的好处是受外界影响小，但是不足是 三个元素的顺序，center一定要放在最后，这是和绝对定位不一样的地方，center占据文档流位置，所以一定要放在最后，左右两个元素位置没有关系。当浏览器窗口很小的时候，右边元素会被击倒下一行。
+*/
+
+.left, .right{
+	height: auto;
+}
+*{
+	padding: 0px;
+	margin: 0px;
+}
+div{
+	margin: 20px;
+}
+img{
+	width: 100%;
+	height: 100%;
+}
+.logo{
+	width: 80px;
+	height: 80px;
+}
+.left{
+	padding: 0px;
+ 	float: left;
+	width: 200px;
+}
+.right{
+	padding: 0px;
+	float: right;
+	width: 120px;
+}
+.main{
+	margin: 20px 160px 0 240px;
+	padding:20px;
+}
+.container{
+	background-color: #eee;
+	border: 1px solid #999;
+	margin: 20px;
+	overflow: auto;
+}
+.container > div{
+	background-color: #fff;
+}
+.text{	
+	 margin-left: 100px;
+}
