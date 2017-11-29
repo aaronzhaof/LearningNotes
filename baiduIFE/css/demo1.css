@@ -7,16 +7,13 @@ a{
 	text-decoration:none;
 }
 img{
-	width:300px;
+	width:320px;
 	height: 200px;
 }
-.clear-float:after,
-.clear-float:before{
-	content:" ";
-	display: block;
-	clear: both;
+.clear-float{
+	overflow: auto;
 }
-.main{
+.body{
 	background-color:rgba(0,0,0,0.3);
 	border-style:solid;
 	border-width:0.1px 40px;
@@ -44,6 +41,16 @@ img{
 .head-nav a{
 	color:white;
 }
+.main{
+	width: auto;
+	margin-right: 380px
+}
+.side-right{
+	position: absolute;
+	width: 400px;
+	right: 40px;
+	top: 85px;
+}
 .contenr{
 	background: rgba(0,0,0,0.3);
 }
@@ -58,11 +65,16 @@ img{
 .good-img{
 	border:0.1em solid rgba(0, 0, 0, 0.3);
 	padding:0px;
-	width:320px;
+	width:200px;
 	margin:15px;
 	margin-left:60px;
 	padding:15px;
 	text-align:center;
+	float: left;
+}
+.nice-img{
+	width: 100%;
+	height: 90%;
 }
 table{
 	width:100%;
