@@ -1,0 +1,129 @@
+/*任务一css*/
+body{
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration:none;
+}
+img{
+	width:320px;
+	height: 200px;
+}
+.clear-float{
+	overflow: auto;
+}
+.body{
+	background-color:rgba(0,0,0,0.3);
+	border-style:solid;
+	border-width:0.1px 40px;
+}
+.head{
+	background-color:rgba(0,0,0,0.7);
+	margin-bottom: 0px;
+	display:flex;
+}
+.log{
+	margin-left:30px;
+	color:red;
+}
+.head-nav{
+	padding:0;
+	width:100%;
+	margin: 0;
+	flex:1;
+}
+.head-nav li{
+	width:12%;
+	float:right;
+	padding-top:10px;
+}
+.head-nav a{
+	color:white;
+}
+.main{
+	width: auto;
+	margin-right: 380px
+}
+.side-right{
+	position: absolute;
+	width: 400px;
+	right: 40px;
+	top: 85px;
+}
+.contenr{
+	background: rgba(0,0,0,0.3);
+}
+.text{
+	width:auto;
+	height:auto;
+	background-color:white;
+	margin:25px;
+	padding:20px;
+	box-shadow: 0.2em 0.2em rgba(0,0,0,0.4);
+}
+.good-img{
+	border:0.1em solid rgba(0, 0, 0, 0.3);
+	padding:0px;
+	width:200px;
+	margin:15px;
+	margin-left:60px;
+	padding:15px;
+	text-align:center;
+	float: left;
+}
+.nice-img{
+	width: 100%;
+	height: 90%;
+}
+table{
+	width:100%;
+	text-align: left;
+	border-color:rgba(0,0,0,0.3);
+	border-collapse: collapse;
+}
+td{
+	background: black;
+	color:white;
+	padding:0;
+	margin:0;
+	border: solid 1px rgba(0,0,0,0.3);
+}
+tr th {
+  border: solid 1px #000000;
+}
+#last{
+	background-color:rgba(0,0,0,0.3);
+}
+#sidebar-head{
+	border-left-style:solid;
+	border-width: 5px;
+	border-color:rgba(0, 0, 0, 0.5);
+}
+.user{
+	text-align: center;
+    flex:1;
+	padding:0;
+	margin:0;
+}
+input{
+	margin-left: 10px;
+}
+span{
+	color:rgba(0, 0, 0, 0.3);
+}
+#submit{
+	width:100%;
+	padding-top:10px;
+	padding-bottom: 10px;
+	background-color: blue;
+	color:white;
+}
+.footer{
+	width:100%;
+	text-align: center;
+	background-color: black;
+	color:white;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
