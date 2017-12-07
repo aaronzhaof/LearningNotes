@@ -1,12 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- 这个任务感觉主要是复习前面用到的定位元素 任务开始乍一看没多少东西 做起来才发现
+其中每一个元素的属性都有差别 2333 到后面类名我都不知道该怎么取了 英语太渣的原因 感觉做完
+这个任务后 对字体属性 元素定位调整 各方面都理解的比之前透彻很多啊 感谢百度前端的大大们费
+这么多心思出的题目 用来练手加深css理解简直太棒了-->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>css实现报纸排版</title>
+  <link rel="stylesheet" href="css/demo6.css">
 </head>
 <body>
-  <p>哈哈哈</p>
+    <div class="newspaper">
+        <div class="main">
+            <div class="main-head clearflow">
+                <div class="red-block">
+                    <p>ife.baidu.com</p>
+                </div>
+                <p class="head-p">2017.12</p>
+            </div>
+            <div class="main-top">
+                <div class="main-topl  clearflow">
+                    <img class="topi" src="img/4.jpg" alt="">
+                    <div class="imgl"></div>
+                    <div class="imgr"></div>
+                </div>
+                <div class="main-topr foar">
+                    <p class="bigp">About</p>
+                    <p class="bigp">Technologe</p>
+                    <p class="smp">About technologe about technologe about technologe</p>
+                    <p class="bestp">700</p>
+                    <div class="botp clearflow">
+                        <p class="foal"style="font-size:55px; ">3.2</p>
+                        <div class="botpr foal">
+                            <p style="font-size:21px;">css</p>
+                            <p>cssssccsccscssc</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-paper clearflow">
+                    <div class="main-paper-txt">
+                        <h1 id="what">What</h1>
+                        <p>前端前端前端前端前端前端前端前端前端前</p>
+                        <p>前端前端前端前端前端前端前端前端前端前</p>
+                        <p>前端前端前端前端前端前端前端前端前端前</p>
+                        <p>前端前端前端前端前端前端前端前端前端前</p>
+                        <p>前端前端前端前端前端前端前端前端前端前</p>
+                        <p>前端前端前端前端前端前端前端前端前端前</p>
+                        <p>前端前端前端前端前端前端前端前端前端前</p>
+                        <p>前端前端前端前端前端前端前端前端前端前</p>
+                        <p>前端前端前端前端</p>
+                    </div>
+                    <div class="main-paper-txt">
+                        <h1 id="when">When</h1>
+                        <p>前端前端前端前端前端前端前端前端前端前</p>
+                        <p>前端前端前端前端前端前端前端前端前端前</p>
+                        <p>前端前端前端前端前端前端前端前端前端前</p>
+                        <p>前端前端前端前端前端前端前端前端前端前</p>
+                        <p>前端前端前端前端前端前端前端前端前端前</p>
+                        <p>前端前端前端前端前端前端前端前端前端前</p>
+                        <p>前端前端前端前端前端前端前端前端前端前</p>
+                        <p>前端前端前端前端前端前端前端前端前端前</p>
+                        <p>前端前端前端前端</p>
+                    </div>
+                    <div class="main-paper-txt">
+                        <div>
+                            <h1 class="how">How</h1>
+                            <p>前端前端前端前端前</p>
+                            <p>前端前端前端前端前端前</p>
+                            <p>前端前端前端前</p>
+                        </div>
+                        <div style="margin-top:60px;">
+                            <p>What--------<span class="incl">40%</span></p>
+                            <p>What--------<span class="incl">30%</span></p>
+                            <p>What--------<span class="incl">30%</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-bot">
+                <div class="main-botl foal">
+                    <div class="main-botl-head">
+                        <p class="h1"><span>THE</span>TECHNOLOGE OF FRPNT</p>
+                        <p class="h2">前端技术领域</p>
+                    </div>
+                    <div id="main-text" class="clearflow">
+                        <b>前</b>
+                        <p>前端前端前端前端前端前端前端前端前端前端前端前端前端前端
+                        前端前端前端前端前端前端前端前端前端前端前端前端前端前端
+                        前端前端前端前端前端前端前端前端前端前端前端前端前端前端
+                        前端前端前端前端前端</p>
+                        <div id="main-botlm">
+                            <img src="img/4.jpg" alt="">
+                        </div>
+                        <p>前端前端前端前端前端前端前端前端前端
+                        前端前端前端前端前端前端前端前端前端前端前端前端前端前端
+                        前端前端前端前端前端前端前端前端前端前端前端前端前端前端
+                        前端前端前端前端前端前端前端前端前端前端前端前端前端前端
+                        前端前端前端前端前端前端前端前端前端前端前端前端前端前端
+                        前端前端前端前端前端前端前端前端前端前端前端前端前端前端
+                        前端前端前端前端前端前端前端前端前端前端前端前端前端前端
+                        </p>
+                        <p>前端前端前端前端前端前端前端前端前端前端前端前端前端前端
+                        前端前端前端前端前端前端前端前端前端前端前端前端前端前端
+                        前端前端前端前端前端前端前端前端前端前端前端前端前端前端
+                        前端前端前端前端前端前端前端前端前端前端前端前端前端前端
+                        前端前端前端前端前端前端前端前端前端前端前端前端前端前端
+                        前端前端前端前端前端前端前端前端前端前端前端前端前端前端
+                        前端前端前端前端前端前端前端前端前端前端前端前端前端前端
+                        前端前端前端前端前端前端前端前端前端前端前端前端前端前端
+                        前端前端前端前端前端前端前端前端前端前端前端前端前端前端
+                        前端前端前端前端前端前端前端前端前端前端前端前端前端前端
+                        </p>
+                    </div>
+                </div>
+                <div class="main-botr foar">
+                    <div class="main-botr-img">
+                        <img src="img/5.jpg" alt="">
+                        <div class="grey-block clearflow">
+                            <div class="green-block foal"></div>
+                            <p>前端技术<span>前端技术前端技术</span></p>
+                        </div>
+                    </div>
+                    <div class="main-botr-txt">
+                        <div class="txt-list">
+                            <ul id="list-con">
+                                <span></span>
+                                <li>前端前端前端前端前端前端 .....................................<span class="li-end">前端</span></li>
+                                <span></span>
+                                <li>前端前端前端前 .......................................................<span class="li-end">前前端</span></li>
+                                <span></span>
+                                <li>前端前端前端前端前端前端 .....................................<span class="li-end">前端</span></li>
+                            </ul>
+                        </div>
+                        <div class="red-block2">
+                            <div class="zero">
+                                <p>0</p>
+                                <span></span>
+                            </div>
+                            <div id="red2-txt">
+                                <p class="red2-txt-t">ONE TWO</p>
+                                <p class="red2-txt-t">THREE FORE FIVE</p>
+                                <p>hello world hello world</p
+
+                                    >
+
+                                <p>hello world</p
+
+                                    >
+
+                            </div>
+                        </div>
+                        <div class="hello">
+                            <span id="quo1">“</span>
+                            <p> world hello world hello world hello world hello world hello world hello</p>
+                            <span id="quo2">”</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
