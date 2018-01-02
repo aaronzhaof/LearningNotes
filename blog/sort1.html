@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Aaronzhaof</title>
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/text.css">
+</head>
+<body>
+	<div id="main">
+		<div id="logo">
+			<h1>南下&走过春秋又一夏</h1>
+			<p>分享个人前端心得</p>
+		</div>
+		<div id="pic1">
+			<img src="img/2.jpg" alt="">
+		</div>
+		<div id="wrapper">
+			<div id="menu">
+				<a class="one" href="#">CSS/HTML</a><br>
+				<a class="one" href="#">JavaScript</a><br>
+			</div>
+			<div id="content">
+				<div id="paper">
+					<h1>冒泡排序</h1>
+					<p	class="con-item-body">   冒泡排序的基本语法</p>
+					<pre>
+						<code>var a = [4,1,2,5,6];
+						  function sortData(){
+								for(var i=0; i &lt; a.length;i++){
+									for(var j=i+1;j &lt;= a.length;j++){
+										if(i &gt; j){
+											var temp=i;
+												i=j;
+												j=temp;
+										}
+									}
+								}
+						  }<code>
+					</pre>
+					<p>--在学习JavaScript DOM 编程艺术一书练习中发现一个错误，有一个项目中要在CSS中的
+					<code>background-image</code>属性中调用一张图片，发现无论如何修改，总是调用失败。路径无误，语法无误。</P><br>
+					<p>最后经检查，原因是我在另一CSSCSS文件中设置背景色时，将<code>background-color</code>简写成<code>background</code>
+						,在这之前我一直这么用也没发现问题。今天才发现，用了<code>background</code>属性后，再想精确设置<code>background</code>
+					属性中的其他子属性，如<code>background-color</code>,<code>background-position</code>等属性时，他们的值会完全被<code>background</code>
+				属性的值所覆盖。所以在网页中显示不出来。</p><br>
+					<p>嗯，所以说人不能偷懒啊！</p>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<p>联系我：</p>
+			<a class="two" target="_blank" href="https://github.com/aaronzhaof" >GitHub</a>
+			<a class="two" target="_blank" href="#E-mail">E-mail</a>
+		</div>
+	</div>
+
+</body>
+</html>
