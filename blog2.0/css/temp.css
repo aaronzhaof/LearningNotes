@@ -1,0 +1,285 @@
+img {
+	width: 100%;
+	height: 100;
+}
+/* 这里本来是设置的 html、body和#container的所有样式都是一样的，但是我在后期做返回顶部的按钮的时候，
+ * 发现设置 html 的height设置了值后 会导致元素click事件发生后无法返回顶部 ，应该是无法改变 body 和
+ * html的 scroll 值？
+ * 在网上寻找答案无果后，只能不设置html的高度。 但是也因此影响了我的布局。
+ * 因为我页面中几个主要组件的宽高都是应用的百分比，html元素无法设置高度导致我下面几个空元素高度塌陷。
+ * 因此我只能给他们设置上下padding或者上下margin来撑起高度。
+ * .left和.right两个节点都是空节点。因为高度塌陷，我采用了上面的做法。*/
+html{
+	width: 100%;
+	/* height: 100%; */
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
+}
+body,#container {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
+}
+a, button, div, h1, h2, h3, h4, h5, h6, p, span {
+    font-family: Verdana,Helvetica,arial,sans-serif!important;
+}
+a {
+	text-decoration: none;
+	color: #000;
+	font-style: normal;
+}
+a, button{
+	cursor:pointer;
+}
+
+#container {
+	overflow: auto;
+}
+/* 左侧栏
+ *  固定图片和隐藏按钮
+ * 使用flexbox进行布局*/
+#left {
+	position: fixed;
+	width: 28%;
+	display: flex;
+	top: 0;
+	left: 0;
+	height: 100%;
+	-webkit-transition: all 1s;
+}
+
+.image {
+	width: 100%;
+	background-image: url(../image/ha.jpg);
+	height: 100%;
+	background-position: 50%;
+	flex: 1;
+}
+
+.hid {
+	margin-left: 5px;
+	width: 20px;
+	position: relative;
+	height: 100%;
+}
+
+.hid>div {
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: url(../image/ico1.jpg);
+	background-repeat: no-repeat;
+	top: 50%;
+	cursor:pointer;
+	transition: all 5s;
+}
+
+/*
+ *主要内容区
+ *分类导航栏 文章列表
+ */
+.main {
+	width: 100%;
+	height: 100%;
+
+}
+
+.main>div {
+	height: 100%;
+	float: left;
+}
+
+.left {
+	width: 30%;
+	/* padding: 100% 0; */
+}
+
+.main > .middle {
+	margin-left: 30%;
+	-webkit-transition: all 1s;
+	width: 50%;
+}
+
+.middle > .top {
+	width: 100%;
+	height: 20px;
+}
+
+.list {
+	display: inline-flex;
+	width: 100%;
+	list-style-type: none;
+}
+
+.list li {
+	flex: 1;
+	margin-top: 20px;
+	font-size: 1.3em;
+}
+.list > .home{
+	padding-left: 50px;
+}
+
+.list > .skill{
+	text-align: center;
+}
+.list > .life{
+	text-align:right;
+}
+
+/* 导航栏下方的下划线div */
+.bar-container {
+	margin-top: 0;
+	height: 3px;
+}
+
+.bar-container > .bar {
+	height: 3px;
+	display:none;
+	width: 73px;
+	background-color: rgb(241, 13, 13);
+	/* transform: translateX(35px); */
+	transition: all .5s;
+}
+
+/* 内容区
+ * 文章目录、文章页的内容主体 */
+#content {
+	top: 10px;
+	height: 85%;
+	width: 100%;
+	padding: 0;
+}
+
+#content-list {
+	padding-top: 2em;
+}
+
+
+/* 文章列表项
+ * 文章标题、标签样式 */
+#content-list section {
+	margin-top: 2em;
+}
+
+#content-list h2 {
+	font-size: 1.3em;
+	color: #000;
+	text-align: center;
+}
+
+#content-list .authors, #content-list .category,
+#content-list .time{
+	display: inline-block;
+	margin-right: 5px;
+	margin-top: 1.5em;
+}
+#content-list .tags {
+	display: inline-block;
+	margin-right: 5px;
+	margin-top: 0;
+}
+.tag-top, .tag-bt {
+	text-align: center;
+}
+
+.tag-top span, .tag-bt span {
+	padding: 2px 10px 2px 8px;
+	border-radius: 3px 0 0 3px;
+	color: #fff;
+	background-color: rgb(61, 207, 137);
+}
+
+.tag-top a, .tag-bt a {
+	padding: 1px 6px;
+	background-color: #fafafa;
+	border-left: 1px solid #dadada;
+	border-right: 1px solid #c5c5c5;
+	border-top: 1px solid #dadada;
+	border-bottom: 1px solid #d2d2d2;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+}
+
+#content-list .hr{
+	margin: 5em auto;
+}
+.right {
+	width: 20%;
+	padding:50% 0;
+}
+
+
+/* 右下 返回顶部按钮样式 */
+#backTop{
+	position: fixed;
+	bottom:30px;
+	right:100px;
+	z-index: 10;
+}
+.icon2{
+	display: block;
+	height: 25px;
+	width: 23px;
+	background-image: url(../image/ico2.jpg);
+	background-repeat: no-repeat;
+}
+
+/* 文章内容页 文章内容样式 */
+#article>.top{
+	padding-top: 6em;
+	text-align: center;
+}
+
+#article>.middl{
+	line-height: 1.5em;
+}
+#article .authors, #article .category,
+#article .time{
+	display: inline-block;
+	margin-right: 5px;
+	margin-top: 1.5em;
+}
+#article .tags {
+	display: inline-block;
+	margin-right: 5px;
+	margin-top: 0;
+}
+#article >.middl pre{
+	/* padding: 10px; */
+	font-family: Courier !important;
+	text-align: left;
+	line-height: 1.8;
+	color:#fff;
+	background-color: rgba(98, 90, 56, 0.59);
+	white-space: pre-wrap;
+}
+
+
+#article>.top  .hr{
+	margin-top: 2em;
+	margin-bottom: 2em;
+	width: 100%;
+	height: 2px;
+	background-color: rgb(61, 207, 137);
+}
+
+/* 内容页页脚样式 */
+#article>.bottom{
+	padding-bottom: 1em;
+}
+#article>.bottom .hr{
+	margin-top: 2em;
+	margin-bottom: 1em;
+	width: 100%;
+	height: 2px;
+	background-color: rgb(61, 207, 137);
+}
+#article > .bottom p{
+	text-align: center;
+	font-size: .9em;
+	font-weight: bolder;
+}
