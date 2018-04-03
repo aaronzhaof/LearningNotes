@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>ZhaoFanBlog</title>
+	<link rel="stylesheet" href="css/temp.css">
+</head>
+
+<body>
+	<div id="container">
+		<div id="left">
+			<div class="image"></div>
+			<div class="hid">
+				<div></div>
+			</div>
+		</div>
+		<div class="main">
+			<div class="left"></div>
+			<div class="middle">
+				<div class='top'></div>
+				<div id="nav-bar">
+					<nav class="list">
+						<li class="home"><a href="Home.html"><span>Home</span></a></li>
+						<li class="skill"><a href="Skill.html"><span>Skill</span></a></li>
+						<li class="life"><a href="Life.html"><span>Life</span></a></li>
+					</nav>
+					<div class="bar-container">
+						<span class="bar"></span>
+					</div>
+				</div>
+				<div id="content">
+					<article id='article'>
+						<header class='top'>
+							<h1>React初探</h1>
+							<div class="tag-top">
+								<p class="authors"><span>作者</span><a>zhaofan</a></p>
+								<p class="category"><span>分类</span><a href="Skill.html">Skill</a></p>
+								<p class="time"><span>发布日期</span><a>2018.3.26</a></p>
+							</div>
+							<div class="tag-bt">
+								<p class="tags"><span>标签</span><a>React</a></p>
+							</div>
+							<div class="hr"></div>
+						</header>
+						<article class='middl'>
+							<p>React的<code>createElement()<code>方法获得元素的说明并返回简单的JavaScript对象
+<br><br></p>
+<p>React的<code>createElement(type, props, content)</code>方法接受三个参数。<br></p>
+							<p>第一个参数<code>type</code>接收的是节点的类型，如 div 或者 ul等<br></p>
+							<p>第二个参数<code>props</code>接收的是节点的属性， 组件的属性可以接受任意值，字符串、对象、函数等等都可以。 创建属性时使用的是键值，如 <code>className:&#39;demo&#39;</code> 注意，因为React本身是JS，而
+								<code>code</code>在es6中被列为关键字,我们写React代码时是在JS脚本中写的，所以创建类名的时候要用<code>className</code>而不是<code>class</code>。<br></p>
+							<p>第三个参数<code>content</code>接收的是节点中具体的内容。</p>
+							<p><b>在创建这些节点的时候，我们在描述DOM节点的对象，而非HTML字符串。</b></p>
+							<p><b>使用<code>creatElement()</code>方法时，并没有真正的创建这个节点，只是描述出了他的内容，只有使用<code>render()</code>方法时，才会在HTML文档中把这个节点加入进去。</b></p>
+							<p><code>this.props</code>对象的属性与组件的属性一一对应，但是有一个例外，就是<code>this.props.children</code>属性。他表示组件的所有子节点。</p>
+							<p><b>要注意的是，<code>this.props.children</code>的值有三种可能：如果当前组件没有子节点，他就是<code>undefined</code>;如果有一个子节点，数据类型是<code>object</code>;如果有多个子节点，数据类型就是<code>array</code>。所以，处理<code>this.props.children</code>的时候要小心。</b></p>
+							<p>有时，我们需要验证一种机制，验证别人使用组件时，提供的参数是否符合要求<code>PropTypes</code>属性，就是用来验证组件实例的属性是否符合要求。</p>
+							<p>组件的生命周期分成三个状态:<br></p>
+							<p>
+								<li>Mounting:已插入真实DOM</li><br></p>
+							<p>
+								<li>Updating:正在被重新渲染</li><br></p>
+							<p>
+								<li>Unmounting:已移出真实DOM</li><br></p>
+							<p>React为每个状态都提供了两种处理函数，<code>will</code>函数在进入状态之前调用,<code>did</code>函数在进入状态之后调用，三种状态共计五种处理函数。</p>
+							<p>
+								<li>componentWillMount()</li><br></p>
+							<p>
+								<li>componentDidMount()</li><br></p>
+							<p>
+								<li>componentWillUpdate(object nextProps,object nextState)</li><br></p>
+							<p>
+								<li>componentDidUpdate(object prevProps, object prebState)</li><br></p>
+							<p>
+								<li>componentWillUnmount()</li><br></p>
+							<p><b>
+注意！组件的style属性的设置方式不能使用html的语法，如</b></p>
+							<pre><code>style=&quot;opacity:{this.state.opacity};&quot;&lt;/b&gt;
+</code></pre>
+							<p><b>要用下面的写法:</b></p>
+							<pre><code>style={{opacity: this.state.opacity}}
+</code></pre>
+							<p><b>这是因为React组件样式是一个对象，所以第一重大括号表示这是JavaScript语法，第二重大括号表示样式对象
+</b></p>
+
+						</article>
+						<footer class="bottom">
+							<div class="hr"></div>
+							<p>本文章为作者原创</p>
+						</footer>
+					</article>
+
+				</div>
+			</div>
+			<div class="right"></div>
+		</div>
+		<div id="backTop" title="返回顶部">
+			<a class="icon2"></a>
+		</div>
+	</div>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js" charset="utf-8"></script>
+	<script src="js/temp.js" charset="utf-8"></script>
+</body>
+
+</html>

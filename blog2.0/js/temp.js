@@ -18,7 +18,7 @@ $('.hid').on({
 		} else {
 			$('#left').css('width', '25px');
 			$('.main > .left').css('width', '25px');
-			$('.main > .middle').css('width', '80%');
+			$('.main > .middle').css('width', '75%');
 			$('.main > .middle').css('marginLeft', '25px');
 			$('.hid>div').css('background-image', 'url(image/ico3.jpg)');
 		}

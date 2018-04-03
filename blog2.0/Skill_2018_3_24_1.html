@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>ZhaoFanBlog</title>
+	<link rel="stylesheet" href="css/temp.css">
+</head>
+
+<body>
+	<div id="container">
+		<div id="left">
+			<div class="image"></div>
+			<div class="hid">
+				<div></div>
+			</div>
+		</div>
+		<div class="main">
+			<div class="left"></div>
+			<div class="middle">
+				<div class='top'></div>
+				<div id="nav-bar">
+					<nav class="list">
+						<li class="home"><a href="Home.html"><span>Home</span></a></li>
+						<li class="skill"><a href="Skill.html"><span>Skill</span></a></li>
+						<li class="life"><a href="Life.html"><span>Life</span></a></li>
+					</nav>
+					<div class="bar-container">
+						<span class="bar"></span>
+					</div>
+				</div>
+				<div id="content">
+					<article id='article'>
+						<header class='top'>
+							<h1>事件委托</h1>
+							<div class="tag-top">
+								<p class="authors"><span>作者</span><a>zhaofan</a></p>
+								<p class="category"><span>分类</span><a href="Skill.html">Skill</a></p>
+								<p class="time"><span>发布日期</span><a>2018.3.24</a></p>
+							</div>
+							<div class="tag-bt">
+								<p class="tags"><span>标签</span><a>Javascript</a></p>
+							</div>
+							<div class="hr"></div>
+						</header>
+						<article class='middl'>
+							<h2 id="-">事件冒泡、事件捕获</h2>
+							<p>事件冒泡，即事件开始时由最具体的元素(文档中嵌套层次最深的那个节点)接收，然后逐级向上传播到较为不具体的节点(文档)。<br> 在事件捕获过程中，document对象首先接收到click事件，然后事件沿DOM树依次向下，一直传播到事件的实际目标，即\&lt;div>元素。
+							</p>
+							<h2 id="-">事件委托</h2>
+							<p>所谓事件代理，就是利用事件冒泡，只指定一个事件处理程序，就可以管理某一类型的所有事件。<br> 至于为什么要用事件代理，是为了提升性能，减少不必要的函数。每个函数都是对象，都会占用内存；内存中的对象越多，性能就越差。其次，必须事先指定所有事件处理程序而导致的DOM访问次数，会延迟整个页面的交互就绪时间。 例如，click事件会一直冒泡到document层次。也就是说，我们可以为整个页面指定一个onclick事件处理程序，而不必给每个可单击的元素分别添加事件处理程序。以下面的代码为例：
+							</p>
+							<pre><code>&lt;ul id=&#39;mylist&#39;&gt;
+      &lt;li id=&#39;blue&#39;&gt;我是蓝色我是蓝色&lt;/li&gt;
+    &lt;li id=&#39;red&#39;&gt;我是红色我是红色&lt;/li&gt;
+    &lt;li id=&#39;yellow&#39;&gt;我是黄色我是黄色&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+							<p>其中包含三个被单击后会执行操作的列表项。按照传统的做法，需要像下面这样为他们添加3个事件处理程序：</p>
+							<pre><code>var blue = document.getElementById(&#39;blue&#39;);
+var red = document.getElementById(&#39;red&#39;);
+var yellow = document.getElementById(&#39;yellow&#39;);
+
+blue.addEventListener(&#39;clcik&#39;,function(){
+    alert(&#39;blue&#39;);
+    },false);
+red.addEventListener(&#39;clcik&#39;,function(){
+    alert(&#39;red&#39;);
+    },false);
+yellow.addEventListener(&#39;clcik&#39;,function(){
+    alert(&#39;yellow&#39;);
+    },false);
+</code></pre>
+							<p>如果只有少量的元素需要添加事件，像上面那样做没什么问题，但是如果有大量的元素需要添加事件，那么用上面的方法无疑会出现很多函数对象，极大的占用内存。因此就出现了事件委托这个方法，事件委托添加事件如下：</p>
+							<pre><code>var mylist=document.getElementById(&#39;mylist&#39;);
+
+mylist.addEventListener(&#39;click&#39;,function(event){
+    target=event.target;
+
+    switch(target.id){
+        case &#39;blue&#39;:
+            alert(&#39;blue&#39;);
+            break;
+        case &#39;red&#39;:
+            alert(&#39;red&#39;);
+            break;
+        case &#39;yellow&#39;:
+            alert(&#39;yellow&#39;)
+            break;
+        }
+    },false);
+</code></pre>
+							<p>上面利用事件冒泡的特性，只给父元素添加了一个事件，根据事件发生时的子元素的id运行事件处理程序，只创建了一个函数，极大的节省了内存。</p>
+
+						</article>
+						<footer class="bottom">
+							<div class="hr"></div>
+							<p>本文章为作者原创</p>
+						</footer>
+					</article>
+
+				</div>
+			</div>
+			<div class="right"></div>
+		</div>
+		<div id="backTop" title="返回顶部">
+			<a class="icon2"></a>
+		</div>
+	</div>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js" charset="utf-8"></script>
+	<script src="js/temp.js" charset="utf-8"></script>
+</body>
+
+</html>

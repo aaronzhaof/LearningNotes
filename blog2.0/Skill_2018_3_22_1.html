@@ -34,11 +34,11 @@
 				<div id="content">
 					<article id='article'>
 						<header class='top'>
-							<h1>Flexbox布局</h1>
+							<h1>外边距叠加</h1>
 							<div class="tag-top">
 								<p class="authors"><span>作者</span><a>zhaofan</a></p>
 								<p class="category"><span>分类</span><a href="Skill.html">Skill</a></p>
-								<p class="time"><span>发布日期</span><a>2018.3.20</a></p>
+								<p class="time"><span>发布日期</span><a>2018.3.22</a></p>
 							</div>
 							<div class="tag-bt">
 								<p class="tags"><span>标签</span><a>CSS</a></p>
@@ -46,17 +46,20 @@
 							<div class="hr"></div>
 						</header>
 						<article class='middl'>
-							<p>弹性布局，是指通过调整其内元素的宽高，从而在任何显示设备上实现对可用显示空间最佳填充的能力。弹性容器扩展其内元素来填充可用空间，或将其收缩来避免溢出。</p>
-							<p>块级布局更侧重于垂直方向、行内布局更侧重于水平方向，但是弹性盒子布局是与方向无关的，弹性盒子布局主要适用于应用程序的组件及小规模的布局，比如页眉的导航栏等。</p>
-							<p>为要使用弹性布局的元素按以下方式设置<code>display</code>属性：</p>
-							<pre><code>display:flex
-								</code></pre>
-							<p>或者</p>
-							<pre><code>display:inline-flex
-								</code></pre>
-							<p>这样做将元素定义为弹性容器，其子元素则成为弹性项目。值<code>flex</code>使弹性容器成为块级元素。 值
-								<code>inline-flex</code>使弹性容器成为单个不可分的行内元素。</p>
-							<p>注意</p>
+							<h1 id="-">什么是外边距叠加？</h1>
+							<p>当两个或更多 <strong>垂直外边距</strong> 相遇时，它们将形成一个外边距。这个外边距的高度等于两个发生叠加的外边距的高度中的 <strong>较大者</strong>。</p>
+							<ul>
+								<li>
+									<p>当一个元素出现在另一个元素上面时，第一个元素的底外边距与第二个元素的顶外边距发生叠加。</p>
+								</li>
+								<li>
+									<p>当一个元素包含在另一个元素中时（假设没有内边距或边框将外边距分隔开），它们的顶和/或底外边距也会发生叠加。</p>
+								</li>
+								<li>
+									<p>外边距甚至可以与本身发生叠加。假设有一个空元素，它有外边距，但是没有边框或内边距。在这种情况下，顶外边距与底外边距就碰到了一起，它们会发生叠加</p>
+								</li>
+							</ul>
+							<h2 id="-">只有普通文档流中块框的垂直外边距才会发生外边距叠加。行内框、浮动框或绝对定位框之间的外边距不会叠加。</h2>
 
 						</article>
 						<footer class="bottom">

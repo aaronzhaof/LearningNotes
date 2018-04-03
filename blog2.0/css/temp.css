@@ -248,7 +248,7 @@ a, button{
 	margin-right: 5px;
 	margin-top: 0;
 }
-#article >.middl pre{
+pre{
 	/* padding: 10px; */
 	font-family: Courier !important;
 	text-align: left;

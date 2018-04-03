@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>ZhaoFanBlog</title>
+	<link rel="stylesheet" href="css/temp.css">
+</head>
+
+<body>
+	<div id="container">
+		<div id="left">
+			<div class="image"></div>
+			<div class="hid">
+				<div></div>
+			</div>
+		</div>
+		<div class="main">
+			<div class="left"></div>
+			<div class="middle">
+				<div class='top'></div>
+				<div id="nav-bar">
+					<nav class="list">
+						<li class="home"><a href="Home.html"><span>Home</span></a></li>
+						<li class="skill"><a href="Skill.html"><span>Skill</span></a></li>
+						<li class="life"><a href="Life.html"><span>Life</span></a></li>
+					</nav>
+					<div class="bar-container">
+						<span class="bar"></span>
+					</div>
+				</div>
+				<div id="content">
+					<article id='article'>
+						<header class='top'>
+							<h1>CSS定位</h1>
+							<div class="tag-top">
+								<p class="authors"><span>作者</span><a>zhaofan</a></p>
+								<p class="category"><span>分类</span><a href="Skill.html">Skill</a></p>
+								<p class="time"><span>发布日期</span><a>2018.3.25</a></p>
+							</div>
+							<div class="tag-bt">
+								<p class="tags"><span>标签</span><a>CSS</a></p>
+							</div>
+							<div class="hr"></div>
+						</header>
+						<article class='middl'>
+							<hr>
+							<p>title: CSS选择权重 date: 2018-03-08 19:03:19</p>
+							<h2 id="tags-">tags:</h2>
+							<p>在上一篇文章中介绍了普通流中的 <strong>块级框和行内框</strong>。<br/> 在CSS中，除非专门指定，否则所有框都在普通流中定义。普通流中的元素定位是根据元素在HTML文档中的位置决定的。除了普通流，CSS中还有还有 <strong>浮动</strong> 和 <strong>绝对定位</strong>。</p>
+							<h2 id="-">相对定位</h2>
+							<p> 通过对一个元素使用以下代码设置元素为相对定位：</p>
+							<pre><code> div{
+    position: relative; //设置元素相对定位
+    left: 20px; //设置元素距离原来位置的距离。
+    top: 20px;
+}
+</code></pre>
+							<p>将元素设置为相对定位后，它将出现在他所在的位置上。可以通过设置垂直或水平位置，让这个元素相对于原本所在的位置移动移动。如果将top值设置为20px,那么元素将出现在原位置顶部下面20px的地方。如果将left设置为20px，会将元素相对于原来的位置向右移动20px.如下图所示：</p>
+							<p><img src="img/相对定位.jpg" alt="" title="相对定位"> 相对定位
+							</p>
+							<p>相对定位时元素仍然会占据原来的空间，但不会让其脱离普通文档流。移动元素会让它覆盖其他元素。</p>
+							<h2 id="-">绝对定位</h2>
+							<p>其中 <strong>绝对定位</strong> 的元素是相对于距离他最近的那个已经定位的祖先元素确定的，如果没有已定位的祖先元素，那么它的位置是相对于初始包含块的。<strong>绝对定位</strong>通过给元素以下代码实现：</p>
+							<pre><code>div {
+	position: absolute;  //设置元素绝对定位
+	left: 20px;  //设置元素在已定位的祖先元素中的位置
+	top: 20px;
+}
+</code></pre>
+							<p>设置了绝对定位的元素会 <strong>脱离文档流</strong>， 因此不占据空间。普通文档流中其他元素的布局就像绝对定位的元素不存在一样。如下图所示：</p>
+							<p><img src="img/绝对定位.jpg" alt="" title="绝对定位"> 绝对定位
+							</p>
+							<p>和相对定位的元素一样，绝对定位的元素也可以通过设置 top、left、right和bottom的值调整绝对定位元素的位置。</p>
+							<p>因为绝对定位的元素与文档流无关，所以它们可以覆盖页面上的其他元素。可以通过设置 z-index属性来控制这些元素的叠放次序。 z-index值越高，元素在栈中的位置就越高。</p>
+							<h2 id="-">固定定位</h2>
+							<p>固定定位是绝对定位的一种。差异在于固定定位的元素是相对于视口进行定位的。这让我们能够创建一直浮动在窗口中相同位置的元素。很多网站中的流氓侧栏广告就是这样的元素，它会随着页面一起滚动。</p>
+
+						</article>
+						<footer class="bottom">
+							<div class="hr"></div>
+							<p>本文章为作者原创</p>
+						</footer>
+					</article>
+
+				</div>
+			</div>
+			<div class="right"></div>
+		</div>
+		<div id="backTop" title="返回顶部">
+			<a class="icon2"></a>
+		</div>
+	</div>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js" charset="utf-8"></script>
+	<script src="js/temp.js" charset="utf-8"></script>
+</body>
+
+</html>
